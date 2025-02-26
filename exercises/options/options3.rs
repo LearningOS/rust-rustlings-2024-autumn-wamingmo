@@ -3,11 +3,18 @@
 // Execute `rustlings hint options3` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 struct Point {
     x: i32,
     y: i32,
+}
+impl Copy for Point {}
+impl Clone for Point {
+    fn clone(&self) -> Self {
+        Point {
+            x: self.x,
+            y: self.y,
+        }
+    }
 }
 
 fn main() {
